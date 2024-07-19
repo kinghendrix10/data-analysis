@@ -1,0 +1,36 @@
+/* Custom CSS for Streamlit App */
+body {
+    background-color: #1e1e1e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+.stButton > button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.stButton > button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.stTextInput {
+    position: fixed;
+    bottom: 100px;
+    width: 100%;
+    background: #333;
+    padding: 10px;
+    color: white;
+}
