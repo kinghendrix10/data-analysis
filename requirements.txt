@@ -1,0 +1,11 @@
+streamlit
+fastapi
+pandas
+openpyxl
+plotly
+transformers
+uvicorn
+requests
+openai
+python-dotenv
+torch  
