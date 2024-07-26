@@ -14,7 +14,7 @@ chatbot_greeting()
 uploaded_file = file_upload_component()
 
 if uploaded_file:
-    response = requests.post('http://backend_server:8000/upload', files={"file": uploaded_file})
+    response = requests.post('http://localhost:8000/upload', files={"file": uploaded_file})
     if response.status_code == 200:
         st.session_state["uploaded_file"] = response.json()
         st.session_state["messages"].append({"role": "system", "content": "File uploaded successfully."})
@@ -23,7 +23,7 @@ if uploaded_file:
 user_input = st.text_input("Ask your question or upload a file to begin:")
 
 if user_input:
-    response = requests.post('http://backend_server:8000/query', json={"query": user_input})
+    response = requests.post('http://localhost:8000/query', json={"query": user_input})
     if response.status_code == 200:
         st.session_state["messages"].append({"role": "user", "content": user_input})
         st.session_state["messages"].append({"role": "bot", "content": response.json()["response"]})
