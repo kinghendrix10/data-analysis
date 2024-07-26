@@ -1,7 +1,7 @@
 # backend/services/query_processing.py
 
-from models.intent_model import deduce_intent
-from services.data_analysis import perform_analysis
+from ..models.intent_model import deduce_intent
+from .data_analysis import perform_analysis
 
 async def process_query(query: str):
     intent = deduce_intent(query)

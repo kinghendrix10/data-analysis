@@ -1,7 +1,7 @@
 # backend/api/endpoints.py
 
 from fastapi import APIRouter, UploadFile, File
-from services import file_processing, query_processing
+from ..services import file_processing, query_processing
 
 router = APIRouter()
 
