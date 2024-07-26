@@ -8,4 +8,8 @@ uvicorn
 requests
 openai
 python-dotenv
-torch  
+torch
+numpy
+matplotlib
+seaborn
+pytest
