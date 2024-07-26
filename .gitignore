@@ -5,3 +5,7 @@ saved_dashboards/
 *.xlsx
 .env
 venv
+*.pyo
+*.pyd
+*.sqlite3
+*.csv
