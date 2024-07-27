@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Data Analysis App is a Streamlit-based application that allows users to upload CSV, Excel, or PDF files and perform data analysis through a chat interface. The app uses advanced AI models (Groq and LLaMA) to understand user intents and generate appropriate data analysis code.
+The Data Analysis App is a Streamlit-based application that allows users to upload CSV, Excel, or PDF files and perform data analysis through a chat interface. The app uses advanced AI models (Mixtral and LLaMA 2) via the Groq API to understand user intents and generate appropriate data analysis code.
 
 ## Features
 
@@ -16,7 +16,6 @@ The Data Analysis App is a Streamlit-based application that allows users to uplo
 
 - Python 3.8+
 - Groq API key
-- LLaMA model (locally available)
 
 ## Installation
 
@@ -39,7 +38,7 @@ The Data Analysis App is a Streamlit-based application that allows users to uplo
 
 4. Set up environment variables:
    - Copy the `.env.example` file to `.env`
-   - Add your Groq API key and LLaMA model path to the `.env` file
+   - Add your Groq API key to the `.env` file
 
 ## Configuration
 
@@ -67,7 +66,7 @@ The `config/config.yaml` file contains various configuration options for the app
 
 - `app.py`: Main Streamlit application
 - `agents/`: Contains the interface and code generation agents
-- `models/`: AI model wrappers (Groq and LLaMA)
+- `models/`: AI model wrappers (Groq API for Mixtral and LLaMA 2)
 - `utils/`: Utility functions for file processing, data analysis, and visualization
 - `config/`: Configuration files
 
