@@ -1,0 +1,34 @@
+# data_analysis_app/config/config.yaml
+
+# Model Configuration
+models:
+  groq:
+    model_name: "mixtral-8x7b-32768"
+    max_tokens: 1000
+  llama:
+    max_length: 1000
+
+# File Processing
+file_processing:
+  allowed_extensions:
+    - csv
+    - xlsx
+    - pdf
+  max_file_size_mb: 10
+
+# Data Analysis
+data_analysis:
+  default_outlier_method: "zscore"
+  outlier_threshold: 3
+
+# Visualization
+visualization:
+  default_figure_size: [10, 6]
+  default_font_size: 12
+  color_palette: "deep"
+
+# Application Settings
+app:
+  title: "Data Analysis App"
+  theme: "dark"
+  max_chat_history: 50
