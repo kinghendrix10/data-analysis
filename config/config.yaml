@@ -6,7 +6,8 @@ models:
     model_name: "mixtral-8x7b-32768"
     max_tokens: 1000
   llama:
-    max_length: 1000
+    model_name: "llama2-70b-4096"
+    max_tokens: 1000
 
 # File Processing
 file_processing:

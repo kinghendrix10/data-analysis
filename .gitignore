@@ -1,7 +1,0 @@
-__pycache__/
-*.pyc
-uploaded_files/
-saved_dashboards/
-*.xlsx
-.env
-venv
