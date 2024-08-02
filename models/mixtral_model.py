@@ -1,4 +1,4 @@
-# data_analysis_app/models/groq_model.py
+# data_analysis_app/models/mixtral_model.py
 
 import os
 from dotenv import load_dotenv
@@ -6,10 +6,10 @@ import groq
 
 load_dotenv()
 
-class GroqModel:
+class MixtralModel:
     def __init__(self):
         self.client = groq.Groq(api_key=os.getenv("GROQ_API_KEY"))
-        self.model = "mixtral-8x7b-32768"  # Using Mixtral model, adjust as needed
+        self.model = "mixtral-8x7b-32768" 
 
     def generate(self, prompt, max_tokens=1000):
         try:
@@ -23,5 +23,5 @@ class GroqModel:
             )
             return response.choices[0].message.content
         except Exception as e:
-            print(f"Error in Groq API call: {str(e)}")
+            print(f"Error in Mixtral API call: {str(e)}")
             return None
