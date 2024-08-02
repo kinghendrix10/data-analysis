@@ -1,11 +1,16 @@
+# data_analysis_app/requirements.txt
+
 streamlit
-fastapi
-pandas
-openpyxl
-plotly
+llama-index
+groq
 transformers
-uvicorn
-requests
-openai
+pandas
+matplotlib
+seaborn
+PyPDF2
+openpyxl
 python-dotenv
-torch  
+plotly
+statsmodels
+streamlit-aggrid
+altair[all]
