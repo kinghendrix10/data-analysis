@@ -37,7 +37,7 @@ The Data Analysis App is a Streamlit-based application that allows users to uplo
    ```
 
 4. Set up environment variables:
-   - Copy the `.env.example` file to `.env`
+   - Create a `.env` file
    - Add your Groq API key to the `.env` file
 
 ## Configuration
