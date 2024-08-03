@@ -1,12 +1,16 @@
 # data_analysis_app/requirements.txt
 
-streamlit==1.18.1
-llama-index==0.6.1
-groq==0.3.0
-transformers==4.28.1
-pandas==1.5.3
-matplotlib==3.7.1
-seaborn==0.12.2
-PyPDF2==3.0.1
-openpyxl==3.1.2
-python-dotenv==1.0.0
+streamlit
+llama-index
+groq
+transformers
+pandas
+matplotlib
+seaborn
+PyPDF2
+openpyxl
+python-dotenv
+plotly
+statsmodels
+streamlit-aggrid
+altair[all]

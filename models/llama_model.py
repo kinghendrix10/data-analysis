@@ -1,22 +1,27 @@
 # data_analysis_app/models/llama_model.py
-
 import os
 from dotenv import load_dotenv
-from transformers import AutoTokenizer, AutoModelForCausalLM
+import groq
 
 load_dotenv()
 
 class LlamaModel:
     def __init__(self):
-        model_path = os.getenv("LLAMA_MODEL_PATH")
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        self.model = AutoModelForCausalLM.from_pretrained(model_path)
+        self.client = groq.Groq(api_key=os.getenv("GROQ_API_KEY"))
+        self.model = "llama3-70b-8192"
 
-    def generate(self, prompt, max_length=1000):
+    def generate(self, prompt, max_tokens=1000):
         try:
-            inputs = self.tokenizer(prompt, return_tensors="pt")
-            outputs = self.model.generate(**inputs, max_length=max_length)
-            return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": "You are a helpful AI assistant for data analysis and code generation."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=max_tokens,
+                temperature=0
+            )
+            return response.choices[0].message.content
         except Exception as e:
-            print(f"Error in LLaMA model generation: {str(e)}")
+            print(f"Error in LLaMA API call: {str(e)}")
             return None
